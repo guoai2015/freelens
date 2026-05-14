@@ -9,11 +9,13 @@ import { getInjectable } from "@ogre-tools/injectable";
 import openLinkInBrowserInjectable from "../../../../../../common/utils/open-link-in-browser.injectable";
 import { supportUrl } from "../../../../../../common/vars";
 import applicationMenuItemInjectionToken from "../../application-menu-item-injection-token";
+import { useTranslation } from "@renderer/i18n/renderer";
 
 const openSupportItemInjectable = getInjectable({
   id: "open-support-menu-item",
 
   instantiate: (di) => {
+    const { t } = useTranslation("menu");
     const openLinkInBrowser = di.inject(openLinkInBrowserInjectable);
     const logger = di.inject(loggerInjectionToken);
 
@@ -22,7 +24,7 @@ const openSupportItemInjectable = getInjectable({
       parentId: "help",
       id: "open-support",
       orderNumber: 30,
-      label: "Support",
+      label: t("menu.help.support"),
 
       // TODO: Convert to async/await
       onClick: () => {

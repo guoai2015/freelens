@@ -6,18 +6,23 @@
 
 import { getInjectable } from "@ogre-tools/injectable";
 import applicationMenuItemInjectionToken from "../application-menu-item-injection-token";
+import { useTranslation } from "@renderer/i18n/renderer";
 
 const helpMenuItemInjectable = getInjectable({
   id: "help-application-menu-item",
 
-  instantiate: () => ({
-    kind: "top-level-menu" as const,
-    id: "help",
-    parentId: "root" as const,
-    orderNumber: 50,
-    label: "Help",
-    role: "help" as const,
-  }),
+  instantiate: () => {
+    const { t } = useTranslation("menu");
+
+    return {
+      kind: "top-level-menu" as const,
+      id: "help",
+      parentId: "root" as const,
+      orderNumber: 50,
+      label: t("menu.help.label"),
+      role: "help" as const,
+    };
+  },
 
   injectionToken: applicationMenuItemInjectionToken,
 });

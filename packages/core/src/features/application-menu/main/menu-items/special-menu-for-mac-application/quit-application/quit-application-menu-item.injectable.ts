@@ -8,6 +8,7 @@ import { getInjectable } from "@ogre-tools/injectable";
 import isMacInjectable from "../../../../../../common/vars/is-mac.injectable";
 import requestQuitOfAppInjectable from "../../../../../../main/electron-app/features/require-quit.injectable";
 import applicationMenuItemInjectionToken from "../../application-menu-item-injection-token";
+import { translate } from "@main/i18n";
 
 const quitApplicationMenuItemInjectable = getInjectable({
   id: "quit-application-menu-item",
@@ -18,7 +19,7 @@ const quitApplicationMenuItemInjectable = getInjectable({
     return {
       kind: "clickable-menu-item" as const,
       id: "quit",
-      label: "Quit",
+      label: translate("menu.help.quit"),
       parentId: isMac ? "mac" : "file",
       orderNumber: isMac ? 140 : 70,
       keyboardShortcut: isMac ? "Cmd+Q" : "Alt+F4",

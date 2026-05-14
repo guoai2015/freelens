@@ -1,0 +1,10 @@
+{
+  "clusterConnectFailed": "连接集群失败",
+  "invalidKubeconfig": "无效的 kubeconfig 文件",
+  "permissionDenied": "权限不足",
+  "resourceNotFound": "资源未找到",
+  "timeout": "操作超时",
+  "networkError": "网络错误",
+  "serverError": "服务器错误",
+  "unknownError": "未知错误"
+}

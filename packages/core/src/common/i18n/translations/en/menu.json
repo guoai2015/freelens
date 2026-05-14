@@ -1,0 +1,43 @@
+{
+  "file": {
+    "label": "File",
+    "addCluster": "Add Cluster",
+    "closeWindow": "Close Window"
+  },
+  "edit": {
+    "label": "Edit",
+    "undo": "Undo",
+    "redo": "Redo",
+    "cut": "Cut",
+    "copy": "Copy",
+    "paste": "Paste",
+    "selectAll": "Select All"
+  },
+  "view": {
+    "label": "View",
+    "back": "Back",
+    "forward": "Forward",
+    "reload": "Reload",
+    "commandPalette": "Command Palette...",
+    "navigate-to-catalog": "Catalog",
+    "toggleTerminal": "Toggle Terminal",
+    "toggleSidebar": "Toggle Sidebar",
+    "zoomIn": "Zoom In",
+    "zoomOut": "Zoom Out",
+    "resetZoom": "Reset Zoom"
+  },
+  "help": {
+    "label": "Help",
+    "documentation": "Documentation",
+    "welcome": "Welcome",
+    "support": "Support",
+    "licenses": "Licenses",
+    "extensions": "Extensions",
+    "about": "About {{productName}}",
+    "quit": "Quit"
+  },
+  "tray": {
+    "open": "Open {{productName}}",
+    "quit": "Quit {{productName}}"
+  }
+}

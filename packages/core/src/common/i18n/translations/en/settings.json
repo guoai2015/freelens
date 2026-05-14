@@ -1,0 +1,29 @@
+{
+  "kubeconfig": "Kubeconfig",
+  "httpProxy": "HTTP Proxy",
+  "httpsProxy": "HTTPS Proxy",
+  "noProxy": "No Proxy",
+  "workingDirectory": "Working Directory",
+  "defaultNamespace": "Default Namespace",
+  "prometheus": "Prometheus",
+  "prometheusAddress": "Prometheus service address",
+  "prometheusHttps": "Prometheus HTTPS requests",
+  "customPathPrefix": "Custom path prefix",
+  "bearerToken": "Bearer token",
+  "requestMethod": "Prometheus request method",
+  "filesystemMountpoints": "Filesystem mountpoints",
+  "terminal": {
+    "label": "Terminal",
+    "shell": "Shell",
+    "workingDirectory": "Working Directory",
+    "defaultNamespace": "Default Namespace",
+    "clear": "Clear",
+    "pickFromFs": "Pick from filesystem"
+  },
+  "editor": {
+    "label": "Editor",
+    "fontSize": "Font Size",
+    "tabSize": "Tab Size",
+    "wordWrap": "Word Wrap"
+  }
+}

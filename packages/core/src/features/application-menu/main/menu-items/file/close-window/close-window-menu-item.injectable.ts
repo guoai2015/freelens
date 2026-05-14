@@ -7,11 +7,13 @@
 import { getInjectable } from "@ogre-tools/injectable";
 import isMacInjectable from "../../../../../../common/vars/is-mac.injectable";
 import applicationMenuItemInjectionToken from "../../application-menu-item-injection-token";
+import { useTranslation } from "@renderer/i18n/renderer";
 
 const closeWindowMenuItemInjectable = getInjectable({
   id: "close-window-application-menu-item",
 
   instantiate: (di) => {
+    const { t } = useTranslation("menu");
     const isMac = di.inject(isMacInjectable);
 
     return {
@@ -20,7 +22,7 @@ const closeWindowMenuItemInjectable = getInjectable({
       parentId: "file",
       orderNumber: 60,
       actionName: "close" as const,
-      label: "Close Window",
+      label: t("menu.file.closeWindow"),
       keyboardShortcut: "Shift+Cmd+W",
       isShown: isMac,
     };

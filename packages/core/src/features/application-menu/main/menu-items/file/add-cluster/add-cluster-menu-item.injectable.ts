@@ -7,11 +7,13 @@
 import { getInjectable } from "@ogre-tools/injectable";
 import navigateToAddClusterInjectable from "../../../../../../common/front-end-routing/routes/add-cluster/navigate-to-add-cluster.injectable";
 import applicationMenuItemInjectionToken from "../../application-menu-item-injection-token";
+import { useTranslation } from "@renderer/i18n/renderer";
 
 const addClusterMenuItemInjectable = getInjectable({
   id: "add-cluster-application-menu-item",
 
   instantiate: (di) => {
+    const { t } = useTranslation("menu");
     const navigateToAddCluster = di.inject(navigateToAddClusterInjectable);
 
     return {
@@ -19,7 +21,7 @@ const addClusterMenuItemInjectable = getInjectable({
       parentId: "file",
       id: "add-cluster",
       orderNumber: 10,
-      label: "Add Cluster",
+      label: t("menu.file.addCluster"),
       keyboardShortcut: "CmdOrCtrl+Shift+A",
 
       onClick: () => {

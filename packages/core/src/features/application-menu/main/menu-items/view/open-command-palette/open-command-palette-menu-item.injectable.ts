@@ -7,11 +7,13 @@
 import { getInjectable } from "@ogre-tools/injectable";
 import broadcastMessageInjectable from "../../../../../../common/ipc/broadcast-message.injectable";
 import applicationMenuItemInjectionToken from "../../application-menu-item-injection-token";
+import { useTranslation } from "@renderer/i18n/renderer";
 
 const openCommandPaletteMenuItemInjectable = getInjectable({
   id: "open-command-palette-menu-item",
 
   instantiate: (di) => {
+    const { t } = useTranslation("menu");
     const broadcastMessage = di.inject(broadcastMessageInjectable);
 
     return {
@@ -19,7 +21,7 @@ const openCommandPaletteMenuItemInjectable = getInjectable({
       parentId: "view",
       id: "open-command-palette",
       orderNumber: 20,
-      label: "Command Palette...",
+      label: t("menu.view.commandPalette"),
       keyboardShortcut: "Shift+CmdOrCtrl+P",
 
       onClick(_m, _b, event) {

@@ -8,11 +8,13 @@ import { loggerInjectionToken } from "@freelensapp/logger";
 import { getInjectable } from "@ogre-tools/injectable";
 import navigateToLicensesInjectable from "../../../../../licenses/common/navigate-to-licenses.injectable";
 import applicationMenuItemInjectionToken from "../../application-menu-item-injection-token";
+import { useTranslation } from "@renderer/i18n/renderer";
 
 const openLicensesMenuItemInjectable = getInjectable({
   id: "open-licenses-menu-item",
 
   instantiate: (di) => {
+    const { t } = useTranslation("menu");
     const navigateToLicenses = di.inject(navigateToLicensesInjectable);
     const logger = di.inject(loggerInjectionToken);
 
@@ -21,7 +23,7 @@ const openLicensesMenuItemInjectable = getInjectable({
       parentId: "help",
       id: "open-licenses",
       orderNumber: 30,
-      label: "Licenses",
+      label: t("menu.help.licenses"),
 
       onClick: () => {
         try {

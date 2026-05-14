@@ -1,0 +1,39 @@
+{
+  "table": {
+    "name": "Name",
+    "namespace": "Namespace",
+    "age": "Age",
+    "status": "Status",
+    "ready": "Ready",
+    "restarts": "Restarts",
+    "image": "Image",
+    "address": "Address",
+    "port": "Port",
+    "type": "Type",
+    "selector": "Selector"
+  },
+  "buttons": {
+    "create": "Create",
+    "edit": "Edit",
+    "delete": "Delete",
+    "scale": "Scale",
+    "rollout": "Rollout",
+    "execute": "Execute",
+    "viewLogs": "View Logs",
+    "download": "Download",
+    "upload": "Upload"
+  },
+  "dialogs": {
+    "confirmDelete": "Are you sure you want to delete?",
+    "confirmAction": "Are you sure you want to perform this action?",
+    "errorTitle": "Error",
+    "warningTitle": "Warning",
+    "successTitle": "Success"
+  },
+  "notifications": {
+    "clusterConnected": "Cluster connected successfully",
+    "clusterDisconnected": "Cluster disconnected",
+    "deploymentUpdated": "Deployment updated successfully",
+    "errorConnecting": "Error connecting to cluster"
+  }
+}

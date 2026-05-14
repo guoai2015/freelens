@@ -1,0 +1,39 @@
+{
+  "table": {
+    "name": "名称",
+    "namespace": "命名空间",
+    "age": "存活时间",
+    "status": "状态",
+    "ready": "就绪",
+    "restarts": "重启次数",
+    "image": "镜像",
+    "address": "地址",
+    "port": "端口",
+    "type": "类型",
+    "selector": "选择器"
+  },
+  "buttons": {
+    "create": "创建",
+    "edit": "编辑",
+    "delete": "删除",
+    "scale": "缩放",
+    "rollout": "滚动更新",
+    "execute": "执行",
+    "viewLogs": "查看日志",
+    "download": "下载",
+    "upload": "上传"
+  },
+  "dialogs": {
+    "confirmDelete": "确定要删除吗？",
+    "confirmAction": "确定要执行此操作吗？",
+    "errorTitle": "错误",
+    "warningTitle": "警告",
+    "successTitle": "成功"
+  },
+  "notifications": {
+    "clusterConnected": "集群连接成功",
+    "clusterDisconnected": "集群已断开连接",
+    "deploymentUpdated": "部署更新成功",
+    "errorConnecting": "连接集群时出错"
+  }
+}

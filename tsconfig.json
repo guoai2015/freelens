@@ -20,7 +20,13 @@
     "verbatimModuleSyntax": false,
     "traceResolution": false,
     "resolveJsonModule": true,
-    "useDefineForClassFields": true
+    "useDefineForClassFields": true,
+    "paths": {
+      "@common/*": ["packages/core/src/common/*"],
+      "@renderer/*": ["packages/core/src/renderer/*"],
+      "@main/*": ["packages/core/src/main/*"],
+      "@/*": ["packages/core/src/*"]
+    }
   },
   "ts-node": {
     "transpileOnly": true,

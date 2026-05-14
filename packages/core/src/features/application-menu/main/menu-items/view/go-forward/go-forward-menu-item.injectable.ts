@@ -7,25 +7,30 @@
 import { getInjectable } from "@ogre-tools/injectable";
 import { webContents } from "electron";
 import applicationMenuItemInjectionToken from "../../application-menu-item-injection-token";
+import { useTranslation } from "@renderer/i18n/renderer";
 
 const goForwardMenuItemInjectable = getInjectable({
   id: "go-forward-menu-item",
 
-  instantiate: () => ({
-    kind: "clickable-menu-item" as const,
-    parentId: "view",
-    id: "go-forward",
-    orderNumber: 50,
-    label: "Forward",
-    keyboardShortcut: "CmdOrCtrl+]",
+  instantiate: () => {
+    const { t } = useTranslation("menu");
 
-    onClick: () => {
-      webContents
-        .getAllWebContents()
-        .filter((wc) => wc.getType() === "window")
-        .forEach((wc) => wc.navigationHistory.goForward());
-    },
-  }),
+    return {
+      kind: "clickable-menu-item" as const,
+      parentId: "view",
+      id: "go-forward",
+      orderNumber: 50,
+      label: t("menu.view.forward"),
+      keyboardShortcut: "CmdOrCtrl+]",
+
+      onClick: () => {
+        webContents
+          .getAllWebContents()
+          .filter((wc) => wc.getType() === "window")
+          .forEach((wc) => wc.navigationHistory.goForward());
+      },
+    };
+  },
 
   injectionToken: applicationMenuItemInjectionToken,
 });

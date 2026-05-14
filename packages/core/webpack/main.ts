@@ -34,6 +34,12 @@ const webpackLensMain = (): webpack.Configuration => {
     },
     resolve: {
       extensions: [".json", ".js", ".ts", ".tsx"],
+      alias: {
+        "@common": path.resolve(__dirname, "..", "src", "common"),
+        "@renderer": path.resolve(__dirname, "..", "src", "renderer"),
+        "@main": path.resolve(__dirname, "..", "src", "main"),
+        "@": path.resolve(__dirname, "..", "src"),
+      },
     },
     externals: [nodeExternals({ modulesFromFile: true })],
     module: {

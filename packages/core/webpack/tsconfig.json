@@ -2,5 +2,12 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "rootDir": ".."
-  }
+  },
+  "include": [
+    "../package.json",
+    "../webpack/vars.ts",
+    "../src/**/*",
+    "../types/*.d.ts",
+    "../src/common/i18n/translations/**/*.json"
+  ]
 }

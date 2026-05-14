@@ -7,11 +7,13 @@
 import { getInjectable } from "@ogre-tools/injectable";
 import reloadCurrentApplicationWindowInjectable from "../../../../../../main/start-main-application/lens-window/reload-current-application-window.injectable";
 import applicationMenuItemInjectionToken from "../../application-menu-item-injection-token";
+import { useTranslation } from "@renderer/i18n/renderer";
 
 const reloadMenuItemInjectable = getInjectable({
   id: "reload-menu-item",
 
   instantiate: (di) => {
+    const { t } = useTranslation("menu");
     const reloadApplicationWindow = di.inject(reloadCurrentApplicationWindowInjectable);
 
     return {
@@ -19,7 +21,7 @@ const reloadMenuItemInjectable = getInjectable({
       parentId: "view",
       id: "reload",
       orderNumber: 60,
-      label: "Reload",
+      label: t("menu.view.reload"),
       keyboardShortcut: "CmdOrCtrl+R",
 
       onClick: () => {

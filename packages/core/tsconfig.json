@@ -5,6 +5,9 @@
     "composite": true,
     "outDir": "static/build/library/",
     "paths": {
+      "@common/*": ["src/common/*"],
+      "@renderer/*": ["src/renderer/*"],
+      "@main/*": ["src/main/*"],
       "*": ["node_modules/*", "types/*"]
     },
     "plugins": [
@@ -16,6 +19,6 @@
       }
     ]
   },
-  "include": ["package.json", "webpack/vars.ts", "src/**/*", "types/*.d.ts"],
+  "include": ["package.json", "webpack/vars.ts", "src/**/*", "types/*.d.ts", "src/common/i18n/translations/**/*.json"],
   "exclude": ["node_modules"]
 }

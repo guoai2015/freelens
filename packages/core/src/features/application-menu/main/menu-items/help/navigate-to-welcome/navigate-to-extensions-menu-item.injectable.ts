@@ -7,11 +7,13 @@
 import { getInjectable } from "@ogre-tools/injectable";
 import navigateToWelcomeInjectable from "../../../../../../common/front-end-routing/routes/welcome/navigate-to-welcome.injectable";
 import applicationMenuItemInjectionToken from "../../application-menu-item-injection-token";
+import { useTranslation } from "@renderer/i18n/renderer";
 
 const navigateToWelcomeMenuItem = getInjectable({
   id: "navigate-to-welcome-menu-item",
 
   instantiate: (di) => {
+    const { t } = useTranslation("menu");
     const navigateToWelcome = di.inject(navigateToWelcomeInjectable);
 
     return {
@@ -19,7 +21,7 @@ const navigateToWelcomeMenuItem = getInjectable({
       parentId: "help",
       id: "navigate-to-welcome",
       orderNumber: 10,
-      label: "Welcome",
+      label: t("menu.help.welcome"),
 
       onClick: () => {
         navigateToWelcome();

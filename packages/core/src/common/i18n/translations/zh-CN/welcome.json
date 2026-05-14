@@ -1,0 +1,10 @@
+{
+  "title": "欢迎使用 {{productName}}！",
+  "description": "为了帮助您快速上手，我们已自动检测到您的 kubeconfig 文件中的集群，并将它们添加到目录中，这是您管理所有云原生资源的集中视图。",
+  "joinUs": "如果您有任何问题或反馈，请加入我们的 ",
+  "githubRepository": "Github 仓库",
+  "learnMore": "了解更多关于 Freelens 的信息",
+  "getStarted": "开始使用",
+  "exploreFeatures": "探索功能",
+  "viewDocs": "查看文档"
+}

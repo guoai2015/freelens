@@ -1,0 +1,10 @@
+{
+  "clusterConnectFailed": "Failed to connect to cluster",
+  "invalidKubeconfig": "Invalid kubeconfig file",
+  "permissionDenied": "Permission denied",
+  "resourceNotFound": "Resource not found",
+  "timeout": "Operation timed out",
+  "networkError": "Network error",
+  "serverError": "Server error",
+  "unknownError": "Unknown error"
+}

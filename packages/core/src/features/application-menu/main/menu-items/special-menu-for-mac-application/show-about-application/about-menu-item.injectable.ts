@@ -8,6 +8,7 @@ import { getInjectable } from "@ogre-tools/injectable";
 import isMacInjectable from "../../../../../../common/vars/is-mac.injectable";
 import productNameInjectable from "../../../../../../common/vars/product-name.injectable";
 import applicationMenuItemInjectionToken from "../../application-menu-item-injection-token";
+import { translate } from "@main/i18n";
 import showAboutInjectable from "./show-about.injectable";
 
 const aboutMenuItemInjectable = getInjectable({
@@ -23,7 +24,7 @@ const aboutMenuItemInjectable = getInjectable({
       id: "about",
       parentId: isMac ? "mac" : "help",
       orderNumber: isMac ? 10 : 40,
-      label: `About ${productName}`,
+      label: translate("menu.help.about", { productName }),
 
       onClick() {
         showAbout();

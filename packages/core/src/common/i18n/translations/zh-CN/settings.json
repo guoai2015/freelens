@@ -1,0 +1,29 @@
+{
+  "kubeconfig": "Kubeconfig",
+  "httpProxy": "HTTP 代理",
+  "httpsProxy": "HTTPS 代理",
+  "noProxy": "不代理",
+  "workingDirectory": "工作目录",
+  "defaultNamespace": "默认命名空间",
+  "prometheus": "Prometheus",
+  "prometheusAddress": "Prometheus 服务地址",
+  "prometheusHttps": "Prometheus HTTPS 请求",
+  "customPathPrefix": "自定义路径前缀",
+  "bearerToken": "Bearer token",
+  "requestMethod": "Prometheus 请求方法",
+  "filesystemMountpoints": "文件系统挂载点",
+  "terminal": {
+    "label": "终端",
+    "shell": "Shell",
+    "workingDirectory": "工作目录",
+    "defaultNamespace": "默认命名空间",
+    "clear": "清除",
+    "pickFromFs": "从文件系统选择"
+  },
+  "editor": {
+    "label": "编辑器",
+    "fontSize": "字体大小",
+    "tabSize": "制表符大小",
+    "wordWrap": "自动换行"
+  }
+}

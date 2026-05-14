@@ -1,0 +1,43 @@
+{
+  "file": {
+    "label": "文件",
+    "addCluster": "添加集群",
+    "closeWindow": "关闭窗口"
+  },
+  "edit": {
+    "label": "编辑",
+    "undo": "撤销",
+    "redo": "重做",
+    "cut": "剪切",
+    "copy": "复制",
+    "paste": "粘贴",
+    "selectAll": "全选"
+  },
+  "view": {
+    "label": "视图",
+    "back": "后退",
+    "forward": "前进",
+    "reload": "重新加载",
+    "commandPalette": "命令面板...",
+    "navigate-to-catalog": "目录",
+    "toggleTerminal": "切换终端",
+    "toggleSidebar": "切换侧边栏",
+    "zoomIn": "放大",
+    "zoomOut": "缩小",
+    "resetZoom": "重置缩放"
+  },
+  "help": {
+    "label": "帮助",
+    "documentation": "文档",
+    "welcome": "欢迎",
+    "support": "支持",
+    "licenses": "许可证",
+    "extensions": "扩展",
+    "about": "关于 {{productName}}",
+    "quit": "退出"
+  },
+  "tray": {
+    "open": "打开 {{productName}}",
+    "quit": "退出 {{productName}}"
+  }
+}

@@ -14,6 +14,7 @@ import { forumsUrl } from "../../../common/vars";
 import productNameInjectable from "../../../common/vars/product-name.injectable";
 import newVersionNotificationInjectable from "./new-version-notification.injectable";
 import welcomeMenuItemsInjectable from "./welcome-menu-items/welcome-menu-items.injectable";
+import { useTranslation } from "../../../renderer/i18n/renderer";
 
 import type { IComputedValue } from "mobx";
 
@@ -28,6 +29,7 @@ interface Dependencies {
 }
 
 const NonInjectedWelcome = observer(({ welcomeMenuItems, productName, newVersionNotification }: Dependencies) => {
+  const { t } = useTranslation("welcome");
   useEffect(() => {
     newVersionNotification();
   }, []);
@@ -39,16 +41,15 @@ const NonInjectedWelcome = observer(({ welcomeMenuItems, productName, newVersion
 
         <div className="flex justify-center">
           <div style={{ width: `${defaultWidth}px` }} data-testid="welcome-text-container">
-            <h2>{`Welcome to ${productName}!`}</h2>
+            <h2>{t("welcome.title", { productName })}</h2>
 
             <p>
-              To get you started we have auto-detected your clusters in your kubeconfig file and added them to the
-              catalog, your centralized view for managing all your cloud-native resources.
+              {t("welcome.description")}
               <br />
               <br />
-              {"If you have any questions or feedback, please join us on our "}
+              {t("welcome.joinUs")}
               <a href={forumsUrl} target="_blank" rel="noreferrer" className="link">
-                Github repository
+                {t("welcome.githubRepository")}
               </a>
               .
             </p>

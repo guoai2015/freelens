@@ -1,0 +1,33 @@
+{
+  "kinds": {
+    "Pod": "Pod",
+    "Deployment": "Deployment",
+    "StatefulSet": "StatefulSet",
+    "DaemonSet": "DaemonSet",
+    "ReplicaSet": "ReplicaSet",
+    "Job": "Job",
+    "CronJob": "CronJob",
+    "Namespace": "Namespace",
+    "Service": "Service",
+    "Ingress": "Ingress",
+    "ConfigMap": "ConfigMap",
+    "Secret": "Secret",
+    "PersistentVolume": "PersistentVolume",
+    "PersistentVolumeClaim": "PersistentVolumeClaim",
+    "StorageClass": "StorageClass",
+    "Node": "Node",
+    "Event": "Event",
+    "ResourceQuota": "ResourceQuota",
+    "LimitRange": "LimitRange"
+  },
+  "actions": {
+    "apply": "apply",
+    "create": "create",
+    "delete": "delete",
+    "describe": "describe",
+    "get": "get",
+    "logs": "logs",
+    "exec": "exec",
+    "port-forward": "port-forward"
+  }
+}
